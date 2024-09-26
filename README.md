@@ -1,7 +1,7 @@
-# INSERT PROJECT TITLE
+# Weather App Project
 
 Link: _Available later_  
-Include project description and use case. List tech stack and other technologies used.
+API implementation practice using Visual Crossing API and others. JS/HTML/CSS.
 
 > **Use as future project template for ESLint/Prettier and Webpack.**
 
