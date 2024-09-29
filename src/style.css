@@ -1,8 +1,67 @@
+:root {
+  --lightbackgroundcolor: rgb(255, 245, 238);
+  --lightbordercolor: rgb(68, 63, 86);
+  --lightbuttonhover: rgb(235, 217, 248);
+  --lightbuttonfocus: rgb(248, 148, 148);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
 }
 body {
-  min-height: 50vh;
+  background-color: var(--lightbackgroundcolor);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.appContainer {
+  border-style: groove;
+  border-radius: 10px;
+  border-color: var(--lightbordercolor);
+  padding: 5px;
+}
+.inputContainer {
+  display: flex;
+  justify-content: center;
+}
+#location,
+.fetch,
+.tempContainer button {
+  background-color: var(--lightbackgroundcolor);
+  border: none;
+}
+.fetch:hover,
+.tempContainer button:hover {
+  background-color: var(--lightbuttonhover);
+}
+.fetch:active,
+.tempContainer button:active {
+  background-color: var(--lightbordercolor);
+}
+.tempContainer button:focus {
+  background-color: var(--lightbuttonfocus);
+}
+.weatherContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 5px;
+}
+img {
+  height: 12vh;
+}
+.tempContainer {
+  display: flex;
+  width: 15vw;
+  justify-content: center;
+  gap: 10px;
 }
