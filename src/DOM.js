@@ -3,6 +3,10 @@ import getWeatherData from './applogic';
 
 export default async function createWeatherContainer(userInput) {
   const weatherObject = await getWeatherData(userInput)
+  console.log(weatherObject);
+  if (weatherObject === null) {
+    return false
+  }
 
   const container = document.querySelector('.weatherContainer');
   container.textContent = '';
@@ -50,4 +54,5 @@ export default async function createWeatherContainer(userInput) {
   const source = await import(`./images/${weatherObject.currentConditions.icon}.png`);
   img.src = source.default;
   container.appendChild(img);
+  return container
 }
